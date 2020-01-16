@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "npmrc-buildpack"
+exit 0
