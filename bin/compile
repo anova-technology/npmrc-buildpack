@@ -8,5 +8,6 @@ if [ "$token" != "" ]; then
   echo "-----> Adding npm registry entry to .npmrc using environment variable TOKEN"
   echo "//npm.pkg.github.com/:_authToken=${token}" >> "${build_dir}/.npmrc"
   echo "//npm.pkg.github.com/anova-technology/:_authToken=${token}" >> "${build_dir}/.npmrc"
+  echo "always-auth=true" >> "${build_dir}/.npmrc"
   exit 0
 fi
