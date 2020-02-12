@@ -4,11 +4,9 @@ ENV_DIR=${3:-}
 build_dir=${1:-}
 token="${TOKEN:-$(cat $ENV_DIR/TOKEN)}"
 
-echo "$build_dir"
-echo "$TOKEN"
-echo "$token"
-
 echo "-----> Adding npm registry entry to .npmrc using environment variable TOKEN"
 echo "//npm.pkg.github.com/:_authToken=${TOKEN}" >> "${build_dir}/.npmrc"
 echo "//npm.pkg.github.com/anova-technology/:_authToken=${TOKEN}" >> "${build_dir}/.npmrc"
+
+cat "${build_dir}/.npmrc"
 exit 0
